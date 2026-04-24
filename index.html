@@ -832,15 +832,15 @@ footer {
 
           <!-- Replace this iframe src with your actual video embed URL -->
           <iframe
-            id="videoPlayer"
-            class="video-player"
-            src="about:blank"
-            data-src="https://www.youtube.com/watch?v=SanmJrg6uq0&feature=youtu.be"
-            title="Sysgrate Product Demo"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-          </iframe>
+  id="videoPlayer"
+  class="video-player"
+  src="about:blank"
+  data-src="https://www.youtube.com/embed/SanmJrg6uq0?autoplay=1&rel=0&modestbranding=1"
+  title="Sysgrate Product Demo"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen>
+</iframe>
 
           <div class="video-content" id="videoOverlay">
             <div class="play-ring">
@@ -1266,6 +1266,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+});
+</script>
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const wrapper = document.getElementById('videoWrapper');
+  const iframe = document.getElementById('videoPlayer');
+  const content = wrapper.querySelector('.video-content');
+
+  wrapper.addEventListener('click', function () {
+    iframe.style.display = 'block';
+    iframe.src = iframe.getAttribute('data-src');
+    content.style.display = 'none';
+  });
+
 });
 </script>
 
