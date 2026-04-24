@@ -831,16 +831,17 @@ footer {
           <div class="video-glow-2"></div>
 
           <!-- Replace this iframe src with your actual video embed URL -->
-         <iframe
+          <iframe
             id="videoPlayer"
             class="video-player"
             src="about:blank"
-            data-src="https://www.youtube.com/embed/SanmJrg6uq0?autoplay=1&rel=0&modestbranding=1"
+            data-src="https://youtu.be/SanmJrg6uq0"
             title="Sysgrate Product Demo"
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen>
           </iframe>
+
           <div class="video-content" id="videoOverlay">
             <div class="play-ring">
               <div class="play-inner" id="playBtn">
@@ -1202,7 +1203,6 @@ footer {
     </div>
   </div>
 </footer>
-   
 
 <!-- ══════════════════════════════════════════
      JAVASCRIPT
@@ -1266,27 +1266,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-});
-// — Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-<script>
-// 🎥 Video Play Logic
-const wrapper = document.getElementById('videoWrapper');
-const video = document.getElementById('videoPlayer');
-const content = wrapper.querySelector('.video-content');
-
-wrapper.addEventListener('click', function () {
-  video.style.display = 'block';
-  video.play();
-  content.style.display = 'none';
 });
 </script>
 
